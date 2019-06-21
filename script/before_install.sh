@@ -2,13 +2,9 @@
 
 yum  update -y
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
 
-/bin/bash ~/.nvm/nvm.sh
-
-nvm install 4.4.5
-
-node -e "console.log('Running Node.js ' + process.version)"
+yum install nodejs -y
 
 npm install pm2 -g
 
